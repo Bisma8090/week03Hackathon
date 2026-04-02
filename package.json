@@ -1,0 +1,13 @@
+{
+  "name": "ecommerce-root",
+  "scripts": {
+    "backend": "npm run dev --prefix backend",
+    "reviews": "npm start --prefix reviews-service",
+    "frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run backend\" \"npm run reviews\" \"npm run frontend\""
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "concurrently": "^8.2.0"
+  }
+}

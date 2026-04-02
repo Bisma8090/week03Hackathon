@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* Global responsive fixes */
+* { box-sizing: border-box; }
+
+/* Hero section responsive */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr; min-height: auto; }
+  .hero-img { max-height: 260px; }
+  .hero-text { padding: 32px 24px !important; }
+  .hero-text h1 { font-size: 1.8rem !important; }
+}
+
+/* Collections page responsive */
+.collections-layout {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 48px 48px;
+}
+@media (max-width: 768px) {
+  .collections-layout { flex-direction: column; padding: 0 16px 32px; }
+  .collections-sidebar { width: 100% !important; }
+  .collections-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .collections-breadcrumb { padding: 10px 16px !important; }
+}
+@media (max-width: 480px) {
+  .collections-grid { grid-template-columns: 1fr !important; }
+}
+
+/* Admin pages responsive */
+.admin-table-wrap { overflow-x: auto; }
+.admin-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 640px) {
+  .admin-form-grid { grid-template-columns: 1fr; }
+  .admin-page-pad { padding: 16px !important; }
+}
+
+/* Footer responsive */
+.footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+@media (max-width: 768px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+
+/* Features bar responsive */
+.features-bar { display: flex; align-items: center; justify-content: space-between; padding: 0 48px; }
+@media (max-width: 768px) {
+  .features-bar { flex-wrap: wrap; gap: 12px; justify-content: center; padding: 0 16px; }
+}
+
+/* Cart drawer responsive */
+@media (max-width: 480px) { .cart-drawer { width: 100vw !important; } }
+
+/* Collections grid */
+.collections-home-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 640px) { .collections-home-grid { grid-template-columns: repeat(2, 1fr); } }
